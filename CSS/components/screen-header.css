@@ -15,3 +15,6 @@
     cursor: pointer;
 }
 
+.screen-header__icons-setting{
+    position: relative;
+}

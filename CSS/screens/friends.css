@@ -4,8 +4,27 @@
     width: 100%;
     padding: 15px 0px;
     color: #2e363e;
+    margin-bottom: 10px;
 }
 
 #friends-display-link i{
     color: rgba(0,0,0,0.3);
 }
+
+.friends-screen{
+    padding: 0px var(--horizontal-space);
+}
+
+.friends-screen__plusChannel{
+    border-top: 2px solid rgba(0,0,0,0.1);
+    padding-top: 15px;
+    margin-top: 25px;
+}
+
+.friends-screen__plusChannel-header{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    color: rgba(0,0,0,0.5);
+}
+
