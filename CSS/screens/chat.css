@@ -1,6 +1,6 @@
 #chat-screen{
     background-color: #abc1d1;
-    height: 1000vh;
+    height: 500vh;
 }
 
 #chat-screen .alt-header{
@@ -17,11 +17,23 @@
     z-index: 2;
 }
 
+@keyframes fadeIn {
+    from{
+        transform: translateY(15px);
+        opacity: 0;
+    }
+    to{
+        transform: none;
+        opacity: 1;
+    }
+}
+
 .main-chat{
     margin-top: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: fadeIn 0.8s linear;
 }
 
 .chat__timestamp{
@@ -86,4 +98,89 @@
 
 .message__wrapper__own .message__info{
     flex-direction: row-reverse;
+}
+
+.reply{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 25px;
+    align-items: center;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+.reply .reply__box:first-child{
+    width: 10%;
+}
+
+.reply .reply__box:last-child{
+    width: 90%;
+    position: relative;
+}
+
+.reply input{
+    height: 30px;
+    width: 100%;
+    border: var(--first--border);
+    border-radius: 15px;
+    padding: 0px 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.reply__box:last-child > i,
+.reply__box:last-child button{
+    position: absolute;
+    right: -18px;
+    top: 2px;
+}
+
+.reply__box:last-child > i{
+    right: 20px;
+    top: 10px;
+}
+
+.reply__box button{
+    background-color: var(--blue);
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+}
+
+.reply__box button i{
+    opacity: 1;
+}
+
+.reply__box button:focus,
+.reply__box button:active{
+    outline: none;
+}
+
+.reply i{
+    opacity: 0.5;
+}
+
+.reply .reply__box:first-child,
+.reply .fa-face-grin,
+.reply button{
+    transition: opacity 0.3s ease-in-out;
+}
+
+.reply:focus-within .reply__box:first-child,
+.reply:focus-within .fa-face-grin,
+.reply:focus-within button{
+    opacity: 0;
+}
+
+.reply:focus-within input{
+    width: 90vw;
+    transform: translateX(-12%) translateY(-80px);
+}
+
+.reply:focus-within{
+    transform: translateY(80px);
 }

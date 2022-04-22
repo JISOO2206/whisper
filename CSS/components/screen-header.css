@@ -18,3 +18,16 @@
 .screen-header__icons-setting{
     position: relative;
 }
+
+@keyframes rotateCog {
+    from{
+        transform: none;
+    }
+    to {
+        transform: rotatez(360deg);
+    }
+}
+
+.screen-header__icons .fa-gear:hover{
+    animation: rotateCog 1.5s linear infinite;
+}

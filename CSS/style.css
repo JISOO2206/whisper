@@ -8,6 +8,7 @@
 @import "components/info-notification.css";
 @import "components/icon-row.css";
 @import "components/alt-screen-header.css";
+@import "components/too-big-screen.css";
 
 @import "screens/login.css";
 @import "screens/friends.css";
